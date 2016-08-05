@@ -16,8 +16,17 @@
       </li>
       {% endif %}
     </ul>
-    <p>
-      {{ site.username }}의 {{ site.title }}
-    </p>
+    <div class="row">
+      <div class="col-xs-6">
+        <p>
+          {{ site.username }}의 {{ site.title }}
+        </p>
+      </div>
+      <div class="col-xs-6">
+        <p class="text-right">
+          subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
+        </p>
+      </div>
+    </div>
   </div>
 </footer>
