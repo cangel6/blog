@@ -13,10 +13,10 @@ layout: default
 
     <div class="panel panel-default">
       <div class="panel-heading">
-        포스트들
+        최근 포스트
       </div>
       <div class="list-group">
-        {% for post in site.posts %}
+        {% for post in site.posts limit:5 %}
         <a class="list-group-item" href="{{ post.url | prepend: site.baseurl }}">
           <span class="badge">{{ post.date | date: "%b %-d, %Y" }}</span>
           {{ post.title }}
@@ -24,5 +24,22 @@ layout: default
         {% endfor %}
       </div>
     </div>
+    {% assign sorted_cats = site.categories | sort %}
+    {% for category in sorted_cats %}
+    {% assign sorted_posts = category[1] | reversed %}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {{category[0] | camelcase }}
+      </div>
+      <div class="list-group">
+        {% for post in site.posts limit:5 %}
+        <a class="list-group-item" href="{{ post.url | prepend: site.baseurl }}">
+          <span class="badge">{{ post.date | date: "%b %-d, %Y" }}</span>
+          {{ post.title }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </div>
