@@ -32,11 +32,21 @@ layout: default
         {{category[0] | camelcase }}
       </div>
       <div class="list-group">
-        {% for post in site.posts %}
+        {% for post in sorted_posts %}
+        {% unless post.draft %}
+
+        {% if post.menutitle %}
+        {% assign title = post.menutitle %}
+        {% else %}
+        {% assign title = post.title %}
+        {% endif %}
+
         <a class="list-group-item" href="{{ post.url | prepend: site.baseurl }}">
           <span class="badge">{{ post.date | date: "%b %-d, %Y" }}</span>
           {{ post.title }}
         </a>
+
+        {% endunless %}
         {% endfor %}
       </div>
     </div>
