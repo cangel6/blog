@@ -2,7 +2,7 @@
 layout: "post"
 title: "StoryMessage(02)"
 date: "2016-12-10 20:17"
-categories: "야생개발자의 프로젝트 추억 팔이"
+categories: "야생개발자의프로젝트추억팔이"
 ---
 
 ## 4. 메모리가 새고있습니다!!!!!!

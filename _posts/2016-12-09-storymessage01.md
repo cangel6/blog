@@ -2,7 +2,7 @@
 layout: "post"
 title: "StoryMessage(01)"
 date: "2016-12-09 23:09"
-categories: "야생개발자의 프로젝트 추억 팔이"
+categories: "야생개발자의프로젝트추억팔이"
 ---
 
 ## 1. 대학 졸업 후 첫 프로젝트
